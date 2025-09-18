@@ -1,6 +1,6 @@
 # Karate NTTData Demo
 
-Este proyecto contiene pruebas automatizadas de APIs utilizando **Karate** , incluyendo escenarios de listado y registro de usuarios.
+Este proyecto contiene pruebas automatizadas de APIs utilizando **Karate** , incluyendo escenarios de CRUD.
 
 ## Contenido del proyecto
 
