@@ -20,8 +20,8 @@ Feature: registrar usuario administrador
     
     @registrarUsuario400 @unhappyPath 
     Scenario: email ya esta registrado
-        * def primerEmailUsuario = crear.usuarios[0].email
-        Given request { "nome": "Fulano da Silva", "email": #(primerEmailUsuario), "password": "teste", "administrador": "true" }
+        * def EmailUsuario = crear.usuarios[6].email
+        Given request { "nome": "Fulano da Silva", "email": #(EmailUsuario), "password": "teste", "administrador": "true" }
         When method post
         Then status 400
         And match response == schemaResponse['400']

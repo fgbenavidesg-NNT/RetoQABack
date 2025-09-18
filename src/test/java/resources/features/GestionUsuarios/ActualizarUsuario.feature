@@ -5,7 +5,7 @@ Feature: actualizar usuario
         * header Content-Type = 'application/json'
         * def schemaResponse = read('classpath:resources/response/actualizarUsuario.schema.json')
         * def crear = callonce read('classpath:resources/features/GestionUsuarios/ListarUsuarios.feature@listarUsuarios')
-        * def usuario = crear.usuarios[0]
+        * def usuario = crear.usuarios[4]
 
     @actualizarUsuario200 @happyPath
     Scenario: cambiado exitosamente

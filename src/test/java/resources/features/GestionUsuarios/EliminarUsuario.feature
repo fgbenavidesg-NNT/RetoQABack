@@ -8,13 +8,11 @@ Feature: eliminar usuario
         
     @eliminarUsuarioPorId200 @happyPath
     Scenario: Registro eliminado correctamente
-        * def usuarioId = crear.usuarios[0]._id
+        * def usuarioId = crear.usuarios[3]._id
         Given path 'usuarios/' + usuarioId
         When method delete
         Then status 200
         And match response == schemaResponse['200']
-        * def email = response.email
-        * print 'El email del usuario es : ', email
     
     @eliminarUsuarioPorId400 @unhappyPath
     Scenario Outline: usuario con carrito registrado

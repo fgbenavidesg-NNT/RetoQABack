@@ -6,7 +6,7 @@ Feature: iniciar sesion
         * header Content-Type = 'application/json'
         * def schemaResponse = read('classpath:resources/response/iniciarSesion.schema.json')
 
-    @iniciarSesion200 @happyPath
+    @iniciarSesion200
     Scenario: login exitoso
         Given request { "email" : "fulano@qa.com", "password" : "teste" }
         When method post

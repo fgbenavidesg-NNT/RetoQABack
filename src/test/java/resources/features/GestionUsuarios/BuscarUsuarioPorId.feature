@@ -8,13 +8,13 @@ Feature: buscar usuario por ID
         
     @buscarUsuarioPorId200 @happyPath
     Scenario: usuario encontrado
-        * def usuarioId = crear.usuarios[0]._id
+        * def usuarioId = crear.usuarios[2]._id
         Given path 'usuarios/' + usuarioId
         When method get
         Then status 200
         And match response == schemaResponse['200']
         * def email = response.email
-        * print 'El email del usuario es : ', email[0]
+        * print 'El email del usuario es : ', email[2]
     
     @buscarUsuarioPorId400 @unhappyPath
     Scenario Outline: usuario no encontrado

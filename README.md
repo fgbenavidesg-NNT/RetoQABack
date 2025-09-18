@@ -1,7 +1,44 @@
-# Ejecución por Tags
-mvn test -Dkarate.options="--tags @createPet"
+# Karate NTTData Demo
 
-# Ejecución por entornos
-mvn test -Dkarate.options="--tags @createPet" -Dkarate.env="dev"
+Este proyecto contiene pruebas automatizadas de APIs utilizando **Karate** , incluyendo escenarios de listado y registro de usuarios.
 
-mvn test -D"karate.options=--tags @actualizarPersona500"
+## Contenido del proyecto
+
+- `src/test/java/resources/features/GestionUsuarios` : Archivos `.feature` con los escenarios de prueba / CRUD Usuarios.  
+- `src/test/java/resources/features/Sesion` : Archivos `.feature` con los escenarios de prueba / Login.  
+- `src/test/java/karate/runner/TestRunner.java` : Clase para ejecutar pruebas en paralelo.  
+- `src/test/java/resources/response/` : Archivos JSON de schemas para validar respuestas.  
+- `pom.xml` : Configuración de Maven con dependencias y plugins.  
+- `karate-config.js` : Configuración global de Karate, incluyendo URLs por entorno y generación de emails aleatorios.
+---
+
+## Requisitos
+- **Java JDK 8** o superior  
+- **Maven 3.8+**  
+- Conexión a internet para descargar dependencias  
+---
+
+## Configuración
+
+1. Clonar el repositorio:
+
+```bash
+git clone https://github.com/fgbenavidesg-NNT/RetoQABack.git
+cd RetoQABack
+
+## Ejecución de pruebas
+
+### 1. Ejecutar todas las pruebas
+```bash
+mvn clean test
+
+# Ejecutar escenario
+mvn test -D"karate.options=--tags @listarUsuarios"
+
+# Casos negativos
+mvn test -D"karate.options=--tags @unhappyPath"
+
+# Casos positivos
+mvn test -D"karate.options=--tags @happyPath"
+
+
