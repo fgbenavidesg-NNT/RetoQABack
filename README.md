@@ -1,6 +1,7 @@
-# Karate NTTData Demo
+#  Reto de Automatización QA – Backend  
 
-Este proyecto contiene pruebas automatizadas de APIs utilizando **Karate** , incluyendo escenarios de CRUD.
+Este proyecto contiene **suite de pruebas automatizadas** de APIs, para la API de Usuarios de [ServeRest]
+(https://serverest.dev/) utilizando **Karate DSL**
 
 ## Contenido del proyecto
 
@@ -25,20 +26,23 @@ Este proyecto contiene pruebas automatizadas de APIs utilizando **Karate** , inc
 ```bash
 git clone https://github.com/fgbenavidesg-NNT/RetoQABack.git
 cd RetoQABack
-
+```
 ## Ejecución de pruebas
 
-### 1. Ejecutar todas las pruebas
+# Ejecutar todas las pruebas
 ```bash
 mvn clean test
-
+```
 # Ejecutar escenario
+```bash
 mvn test -D"karate.options=--tags @listarUsuarios"
-
+```
 # Casos negativos
+```bash
 mvn test -D"karate.options=--tags @unhappyPath"
-
+```
 # Casos positivos
+```bash
 mvn test -D"karate.options=--tags @happyPath"
-
+```
 
